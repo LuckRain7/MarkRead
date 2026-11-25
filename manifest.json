@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "MarkRead — 本地 Markdown 阅读器",
+  "short_name": "MarkRead",
+  "version": "1.0.0",
+  "description": "把本地 .md 文件渲染成可读文档：目录导航、双主题、代码高亮。",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["file:///*"],
+      "js": [
+        "vendor/marked.umd.js",
+        "vendor/purify.min.js",
+        "vendor/highlight.min.js",
+        "src/lib/md-core.js",
+        "src/page.js",
+        "src/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/styles.css"],
+      "matches": ["file:///*"]
+    }
+  ]
+}

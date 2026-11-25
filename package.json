@@ -1,0 +1,16 @@
+{
+  "name": "markread",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome 扩展：把本地 .md 文件渲染成可读文档",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "vendor": "bash scripts/vendor.sh"
+  },
+  "devDependencies": {
+    "@highlightjs/cdn-assets": "^11.11.1",
+    "dompurify": "^3.2.6",
+    "jsdom": "^26.1.0",
+    "marked": "^15.0.12"
+  }
+}
